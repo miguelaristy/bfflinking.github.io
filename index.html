@@ -5,19 +5,9 @@
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         var baseUri = "bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8";
-        console.log("BFF redirect schema", baseUri);
-        var redirectInterval = setInterval(function () {
-          var countdown = document.querySelector(".countdown"),
-            t = parseInt(countdown.innerText, 10);
-          t -= 1;
-          countdown.innerText = t;
-          if (t === 0) {
-            clearInterval(redirectInterval);
-            setTimeout(function () {
-              window.location.href = baseUri;
-            }, 500);
-          }
-        }, 1000);
+        setTimeout(function () {
+          window.location.href = baseUri;
+        }, 500);
       });
     </script>
   </head>
