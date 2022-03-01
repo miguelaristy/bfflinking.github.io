@@ -8,14 +8,37 @@
         setTimeout(function () {
           //window.location.href = baseUri;
           //window.location.replace(baseUri);
-          window.open(baseUri);
+          //window.open(baseUri);
         }, 500);
       });
     </script>
   </head>
   <body>
-    <h2>BFF</h2>
-    <a href="bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8"> Abrir</a>
-    <p>Abriendo en: <span class="countdown">5</span></p>
+    <iframe
+      style="display: none"
+      height="0"
+      width="0"
+      src="bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8"
+    ></iframe>
+    <script>
+      var start = Date.now();
+      function try_close() {
+        location.replace("about:blank");
+      }
+
+      function store_or_close() {
+        var now = Date.now();
+        if (now - start > 3000) {
+          try_close();
+        } else {
+          window.location.replace(
+            "http://play.google.com/store/apps/details?id=com.bestfriendfamoso.people"
+          );
+          setInterval(try_close, 1000);
+        }
+      }
+
+      setInterval(store_or_close, 2000);
+    </script>
   </body>
 </html>
