@@ -6,7 +6,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         var links = document.querySelectorAll("a");
-        var baseUri = "exp://wg-qka.notbrent.app.exp.direct";
+        var baseUri = "bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8";
 
         // Take the uri from the params
         var qs = decodeURIComponent(document.location.search);
@@ -16,7 +16,8 @@
 
         // Update the link urls
         for (var i = 0; i < links.length; ++i) {
-          links[i].href = links[i].href.replace("exp://REPLACE_ME/", baseUri);
+          //links[i].href = links[i].href.replace("exp://REPLACE_ME/", baseUri);
+          links[i].href = baseUri;
           console.log(links[i].href);
         }
 
