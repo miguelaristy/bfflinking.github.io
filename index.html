@@ -4,10 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
-        var baseUri = "intent://talent/63c3da12-63d6-4032-97d0-4288334f9fe8;package=com.bestfriendfamoso.people;scheme=bffpeople;end;";
+        var baseUri = "bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8";
         setTimeout(function () {
-          window.location.href = baseUri;
+          //window.location.href = baseUri;
           //window.location.replace(baseUri);
+          window.open(baseUri);
         }, 500);
       });
     </script>
