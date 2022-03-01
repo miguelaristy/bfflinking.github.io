@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "com.bestfriendfamoso.people"
+        ],
+        "components": [
+          {
+            "#": "no_universal_links",
+            "exclude": true,
+            "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
+          },
+          {
+            "/": "/talent/*",
+            "comment": "Matches any URL whose path starts with /talent/"
+          }
+        ]
+      }
+    ]
+  }
+}
