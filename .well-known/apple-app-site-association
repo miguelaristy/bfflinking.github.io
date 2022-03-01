@@ -3,7 +3,8 @@
     "details": [
       {
         "appIDs": [
-          "com.bestfriendfamoso.people"
+          "com.bestfriendfamoso.people",
+          "bffpeople"
         ],
         "components": [
           {
