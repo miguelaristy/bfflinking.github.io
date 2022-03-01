@@ -4,8 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
-        var baseUri = "bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8",
-          link = document.querySelectorAll("a")[0];
+        var baseUri = "bffpeople://talent/63c3da12-63d6-4032-97d0-4288334f9fe8";
         console.log("BFF redirect schema", baseUri);
         var redirectInterval = setInterval(function () {
           var countdown = document.querySelector(".countdown"),
@@ -14,9 +13,9 @@
           countdown.innerText = t;
           if (t === 0) {
             clearInterval(redirectInterval);
-            console.log(link, baseUri);
-            // window.location.href = baseUri;
-            link.click();
+            setTimeout(function () {
+              window.location.href = baseUri;
+            }, 500);
           }
         }, 1000);
       });
